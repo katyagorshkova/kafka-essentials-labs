@@ -1,1 +1,1 @@
-# kafka-essentials-labs
+This is a repo for labs in Kafka Essentials course
