@@ -1,0 +1,28 @@
+1. Log in with key
+
+   kafka1@lab01.northcentralus.cloudapp.azure.com
+
+2. Control Center
+
+http://lab01.northcentralus.cloudapp.azure.com:9021
+
+
+3. Rest 
+
+http://lab01.northcentralus.cloudapp.azure.com:8082
+
+4. Schema Registry
+
+http://lab01.northcentralus.cloudapp.azure.com:8081
+
+5. Kafka Connect
+
+http://lab01.northcentralus.cloudapp.azure.com:8083
+
+6. Topics UI
+
+http://lab01.northcentralus.cloudapp.azure.com:8000
+
+7. Adminer
+
+http://lab01.northcentralus.cloudapp.azure.com:8080
