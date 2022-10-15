@@ -1,11 +1,17 @@
 This is a repo for labs in Kafka Essentials course
 
+Requirements:
+
+- Docker. You need to have docker. You can install it from (https://www.docker.com/products/docker-desktop)
+- Http client like Postman, curl, etc
+
+Clone this repository or download it as a zip file.
+
 Module1 - use file docker-compose.yaml
 
 Inside the directory run
 
 `docker compose up`
-
 
 
 Module2, Module3, Module4 use file docker-compose-all.yaml
