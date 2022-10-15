@@ -197,7 +197,7 @@ services:
           connections:
             docker-kafka-server:
               properties:
-                bootstrap.servers: "kafka:19092"
+                bootstrap.servers: "broker:19092"
               schema-registry:
                 url: "http://schema-registry:8081"
     ports:

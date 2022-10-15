@@ -1,3 +1,5 @@
+Synchronise data from Postgres to Kafka
+
 1. Login into  admin application http://localhost:8080
 2. Login as
 
@@ -5,14 +7,22 @@ System: Postgresql
 Server: postgres
 Username: demo
 Password: demo
-Database: orders
+Database: shop
+
+2. Create a database (SQL command)
+
+CREATE TABLE IF NOT EXISTS products (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    price INT
+);
 
 3. Enter SQL Command
 
-  insert into orders values(1,'a');
-  insert into orders values(2,'b');
-  insert into orders values(3,'c');
-  insert into orders values(4,'d');
+  insert into products values(1, 'сup', 1);
+  insert into products values(2, 'kettle', 5);
+  insert into products values(3, 'phone', 500);
+  insert into products values(4, 'tablet', 125);
 
 4. Check connector-plugins through control center or through
 
@@ -21,7 +31,11 @@ curl http://localhost:8083/connector-plugins
  
 5. Add JDBC source connector
 
-Add configuration through Control Center. Connect -> Cluster -> JDBC Source Connector-> Upload connector config file. The configuration is in postgres-source-connector-1.json
+Add configuration through Control Center. 
+
+http://localhost:9021
+
+Connect -> Cluster -> JDBC Source Connector-> Upload connector config file. The configuration is in postgres-source-connector-1.json
 
 or through REST
 
@@ -34,13 +48,14 @@ curl http://localhost:8083/connectors/jdbc-source-connector/status
 
 7. Check messages
 
-http://localhost:8000/
+http://localhost:8180/
 
 8. Add more data 
 
-  insert into orders values(5,'e');
-  insert into orders values(6,'f');
+  insert into products values(5, 'toaster', 15);
+  insert into products values(6, 'coffee maker', 25);
 
 9. Check messages
 
+http://localhost:8180/
 

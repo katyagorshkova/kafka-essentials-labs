@@ -1,9 +1,9 @@
 {
-  "name": "jdbc-sink-connector",
+  "name": "jdbc-sink-connector-2",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
-    "topics": "customers",
+    "topics": "customers-with-key",
     "connection.url": "jdbc:postgresql://postgres:5432/shop",
     "connection.user": "demo",
     "connection.password": "demo",
@@ -11,7 +11,9 @@
     "auto.create": "true",
     "insert.mode.databaselevel": true,
     "value.converter": "io.confluent.connect.avro.AvroConverter",
-    "value.converter.schema.registry.url": "http://schema-registry:8081"
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "pk.mode" : "record_value",
+    "pk.fields": "id"
     
   }
 }
