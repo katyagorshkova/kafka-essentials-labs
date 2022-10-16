@@ -202,9 +202,6 @@ services:
                 url: "http://schema-registry:8081"
     ports:
       - 8180:8080
-    links:
-      - kafka
-      - schema-registry
 
   postgres:
     image: postgres:14.1
